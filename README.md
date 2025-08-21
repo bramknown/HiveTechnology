@@ -1,2 +1,2 @@
-# HiveTechnology.github.io
+# HiveTechnology
 HiveTechnology
