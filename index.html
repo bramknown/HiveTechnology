@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Hive Technology</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 40px; /* Space for fixed footer */
+            background-color: #fffbe6;
+            color: #333;
+            position: relative;
+            min-height: 95vh; /* Ensure body takes full viewport height */
+        }
+        header {
+            background-color: #ffd700;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            width: 150px;
+            order: 2; /* Move logo to the right */
+        }
+        header div {
+            order: 1; /* Text content to the left */
+            text-align: left;
+        }
+        nav {
+            background-color: #f0c040;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a.active {
+            color: #000;
+            border-bottom: 2px solid #333;
+        }
+        section {
+            padding: 40px;
+            max-width: 600px; /* Narrow content for readability */
+            margin: 0 0 0 20px; /* Shift content left to make room for canvas */
+            display: none; /* Hide all sections by default */
+        }
+        section.active {
+            display: block; /* Show active section */
+        }
+        .interactive-hive {
+            position: fixed;
+            top: 250px; /* Adjust to position below header and nav */
+            right: 20px; /* Slightly to the right */
+            width: 50%;
+            max-width: 900px;
+            height: 600px;
+            overflow: hidden;
+            z-index: 0; /* Ensure canvas stays in background */
+        }
+        .interactive-hive canvas {
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        footer {
+            background-color: #ffd700;
+            padding: 5px;
+            text-align: center;
+            font-size: 0.8em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1; /* Ensure footer is above canvas */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Honey Hive Technology</h1>
+            <p>Digitalisation and AI Sustainability - Agriculture</p>
+            <p>Team Members: Bram Spriensma, Hussain Mesfer M Al Muammar, Nanchong Li, Huanjian Zhong, Yichen Zhu</p>
+        </div>
+        <img src="logo.png" alt="Honey Hive Logo">
+    </header>
+
+    <nav>
+        <a href="#industry" class="active">Honey Industry</a>
+        <a href="#crisis">Crisis</a>
+        <a href="#reduce">Reduce Impact</a>
+        <a href="#works">Our Works</a>
+        <a href="#users">User Groups</a>
+        <a href="#market">Market Opportunity</a>
+        <a href="#sustainability">Sustainability</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="interactive-hive" id="hiveCanvas"></div>
+
+    <section id="industry" class="active">
+        <h2>Honey Industry</h2>
+        <p>Bees contributing billions to the economy.</p>
+        <p>Every third bite of food we eat depends on bees.</p>
+        <p>Bee populations are collapsing.</p>
+    </section>
+
+    <section id="crisis">
+        <h2>Crisis in the Honey Industry</h2>
+        <p>Economic Devastation</p>
+        <p>Small Hive Beetles</p>
+        <p>American foulbrood</p>
+        <p>Varroa mite</p>
+        <p>Economic development</p>
+        <ul>
+            <li>Time Consuming</li>
+            <li>Labor Intensive</li>
+            <li>Disturbance</li>
+        </ul>
+    </section>
+
+    <section id="reduce">
+        <h2>How Can We Reduce Impact?</h2>
+        <p>Detection of early signs and Prevention Methods.</p>
+        <h3>Solar Powered</h3><div class="hive-info">Utilizes solar energy for sustainable hive operations.</div>
+        <h3>Laser Technology</h3><div class="hive-info">Targets pests with precision to protect bee colonies.</div>
+        <h3>UV Light</h3><div class="hive-info">Sterilizes hive environments to prevent disease spread.</div>
+        <h3>Temperature and Humidity Sensor</h3><div class="hive-info">Monitors hive conditions for optimal bee health.</div>
+        <h3>CO2 and Sound Analysis Sensors</h3><div class="hive-info">Analyzes air quality and bee activity for early issue detection.</div>
+        <h3>ML Predictions</h3><div class="hive-info">Predicts yield and health using machine learning.</div>
+        <h3>Sustainability</h3><div class="hive-info">Promotes eco-friendly practices and biodiversity.</div>
+    </section>
+
+    <section id="works">
+        <h2>Our Works</h2>
+        <ul>
+            <li>Scalable and seamless integration.</li>
+            <li>Economic benefit. Global beekeeping market projected over $20 billion next year (2026), growing 6% yearly.</li>
+            <li>R&D, testing and manufacturing. Seed investment of $1 Million.</li>
+            <li>More productive agriculture industry.</li>
+            <li>Resilient future. Empowers beekeepers of all scales.</li>
+        </ul>
+    </section>
+
+    <section id="users">
+        <h2>Who Are Our User Groups?</h2>
+        <p>Commercial beekeeping</p>
+        <p>Agriculture Farmers</p>
+        <p>Hobbyist Farmers</p>
+    </section>
+
+    <section id="market">
+        <h2>Market Opportunity</h2>
+        <p>Global beekeeping market projected over $20 billion next year (2026), growing 6% yearly. We are seeking $1 million in seed investment.</p>
+        <p>Seed investment of 1 Million.</p>
+    </section>
+
+    <section id="sustainability">
+        <h2>Driving Sustainability Through Innovation</h2>
+        <p>We aim to protect bees, support farmers and build sustainable future.</p>
+        <p>Supports climate-smart farming with AI</p>
+        <p>Safeguards biodiversity through healthier bees</p>
+    </section>
+
+    <section id="contact">
+        <h2>Thank You</h2>
+        <p>Let's make hives smarter & our future sweeter.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Honey Hive Technology. All rights reserved.</p>
+    </footer>
+
+    <script src="beeSimulation.js"></script>
+    <script>
+        // Navigation toggle functionality
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Remove active class from all links and sections
+                document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+                document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+                // Add active class to clicked link and corresponding section
+                link.classList.add('active');
+                const sectionId = link.getAttribute('href').substring(1);
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
